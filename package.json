@@ -1,0 +1,14 @@
+{
+  "name": "poc.script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start -w app1 & npm run start -w app2 & npm run start -w app3"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ]
+}
