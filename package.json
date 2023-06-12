@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start -w app1 & npm run start -w app2 & npm run start -w app3"
+    "start": "APP_FOLDER_ROOT_PATH=./packages; cd $APP_FOLDER_ROOT_PATH && for APP_PATH in $(find . -mindepth 1 -maxdepth 1 -type d); do npm run start -w $(basename $APP_PATH) & done; wait"
   },
   "author": "",
   "license": "ISC",
